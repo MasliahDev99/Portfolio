@@ -1,0 +1,179 @@
+:root{
+    --background-start: #3730A3; /* Background Start */
+    --background-end: #581C87;   /* Background End */
+    --background-card: #1F2937;  /* Card Background */
+    --text-primary: #FFFFFF;      /* Text Primary */
+    --text-secondary: #9CA3AF;    /* Text Secondary */
+    --input-background: #374151;  /* Input Background */
+    --input-border: #4B5563;      /* Input Border */
+    --button-primary: #4F46E5;    /* Button Primary */
+    --button-hover: #6451FF ;      /* Button Hover */
+}
+.bg-text-primary{
+color:var(--button-hover);
+}
+.bg-text-secondary{
+    color: var(--text-secondary);
+}
+.bg-input-border{
+background-color: var(--input-border);
+}
+.bg-gray-simil{
+background-color: #3c4045;
+}
+.bg-teritary{
+background-color: #2e3236;
+}
+.text-80{
+font-size: clamp(40px, 10vh, 80px);
+}
+.bg-transparent{
+background-color: transparent;
+}
+.focus-button:focus {
+border-color: var(--input-border);
+}
+
+.nav-link:hover, .nav-link.active {
+color: #60a5fa !important; /* Azul claro al pasar el mouse o para el enlace activo */
+}
+.navbar-toggler {
+border-color: rgba(255,255,255,0.1);
+}
+.navbar-toggler-icon {
+background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.gradient-title {
+font-size: 4rem;
+font-weight: bold;
+background-image: linear-gradient(
+    to right,
+    #60a5fa,  /* Azul claro */
+    #a78bfa,  /* Púrpura */
+    #f472b6   /* Rosa */
+);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+background-size: 200% 200%;
+animation: gradient-animation 3s ease infinite;
+}
+
+@keyframes gradient-animation {
+0% {
+    background-position: 0% 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
+100% {
+    background-position: 0% 50%;
+}
+}
+.dropdown-item:hover{
+background-color: #343a40;
+}
+
+@keyframes neon-pulse {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.2), 0 0 10px rgba(0, 123, 255, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.3), 0 0 15px rgba(0, 123, 255, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.2), 0 0 10px rgba(0, 123, 255, 0.1);
+    }
+}
+.project-card {
+position: relative;
+overflow: hidden;
+border-radius: 0.5rem;
+box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+animation: neon-pulse 3s infinite;
+}
+.project-card img {
+width: 800px;
+height: 400px;
+transition: transform 0.3s ease;
+}
+.project-card:hover img {
+transform: scale(1.1);
+}
+.project-overlay {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+padding: 1rem;
+}
+.project-links {
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+.project-card:hover .project-links {
+opacity: 1;
+}
+.animate-on-scroll {
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.animate-on-scroll.is-visible {
+opacity: 1;
+transform: translateY(0);
+}
+.btn-formacion {
+    transition: all 0.3s ease;
+}
+.btn-formacion:hover, .btn-formacion.active {
+    transform: scale(1.1);
+    background-color: #3B82F6;
+    border-color: #3B82F6;
+}
+.formation-content {
+   
+    display: none;
+}
+.formation-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.skill-badge {
+    background-color: #1F2937;
+    transition: all 0.3s ease;
+}
+.skill-badge:hover {
+    background-color: #3B82F6;
+    transform: scale(1.1);
+}
+
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #3B82F6;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+@keyframes neon-pulse2 {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+.neon-separator {
+    width: 2px;
+    background-color: #3B82F6;
+    box-shadow: 0 0 10px #3B82F6, 0 0 20px #3B82F6;
+    animation: neon-pulse2 1.5s infinite alternate;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
